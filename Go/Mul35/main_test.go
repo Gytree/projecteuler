@@ -22,8 +22,20 @@ func TestSumSolution(t *testing.T){
 }
 
 func BenchmarkSumSolution(b *testing.B) {
-    
     for i:=0; i < b.N; i++ {
         sumSolution()
+    }
+}
+
+
+func TestArithmetichSolution(t *testing.T){
+    if arithmeticSolution() != 233168 {
+        t.Error("the arithmetic solution don't return the expected result")
+    }
+}
+
+func BenchmarkArithmetciSolution(b *testing.B) {
+    for i:=0; i < b.N; i++ {
+        arithmeticSolution()
     }
 }
